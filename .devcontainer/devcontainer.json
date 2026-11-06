@@ -1,0 +1,6 @@
+{
+  "name": "Lisp Study - Racket",
+  "build": {
+    "dockerfile": "Dockerfile"
+  }
+}
