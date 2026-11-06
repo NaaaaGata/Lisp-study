@@ -2,5 +2,27 @@
   "name": "Lisp Study - Racket",
   "build": {
     "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "raco pkg install --auto racket-langserver",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "evzen-wybitul.magic-racket",
+        "ms-vsliveshare.vsliveshare"
+      ],
+      "settings": {
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": true,
+        "[racket]": {
+          "editor.autoIndent": "full",
+          "editor.autoClosingBrackets": "always",
+          "editor.autoClosingQuotes": "always",
+          "editor.insertSpaces": true,
+          "editor.tabSize": 2,
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "evzen-wybitul.magic-racket"
+        }
+      }
+    }
   }
 }
